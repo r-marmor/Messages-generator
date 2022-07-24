@@ -1,5 +1,5 @@
 const randomNumber = (num) => {
-    Math.floor(Math.random) * num;
+    return Math.floor(Math.random() * num);
 }
 
 const randomGift = {
@@ -17,23 +17,23 @@ for (let caract in randomGift) {
     switch(caract) {
         
         case 'type':
-            yourGift.push(`Your random gift is a : ${randomGift[caract][rdmIndex]}.`)
-            break;
+            yourGift.push(`Your random gift is a : "${randomGift[caract][rdmIndex]}".`)
+            break
         
         case 'color':
-            yourGift.push(`Which color is : ${randomGift[caract][rdmIndex]}`)
-            break;
+            yourGift.push(`Which color is : "${randomGift[caract][rdmIndex]}".`)
+            break
 
         case 'pureness':
-            yourGift.push(`Its pureness is : ${randomGift[caract][rdmIndex]}`)
-            break;
+            yourGift.push(`Its pureness is : "${randomGift[caract][rdmIndex]}".`)
+            break
 
         default: yourGift.push("Error: can't identify your gift")
     }
 };
 
-const formattedGift = () => {
-    yourGift.join('\n')
+const formattedGift = (arr) => {
+   console.log(yourGift.join('\n'))
 };
 
 formattedGift(yourGift);
