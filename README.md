@@ -3,7 +3,7 @@
 *This is one of my project from Codecademy.
 
 ## Credits to :
-**Me, myself and I.
+_Me, myself and I.
 
 ## Licence : 
 VS Code.
