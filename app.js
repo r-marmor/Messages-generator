@@ -8,32 +8,22 @@ const randomGift = {
     pureness: ['75%', '85%', '95%', '100%']
 };
 
-const yourGift = [];
-
-for (let caract in randomGift) {
-    
-    let rdmIndex = randomNumber(randomGift[caract].length);
-
-    switch(caract) {
-        
-        case 'type':
-            yourGift.push(`Your random gift is a : "${randomGift[caract][rdmIndex]}".`)
-            break
-        
-        case 'color':
-            yourGift.push(`Which color is : "${randomGift[caract][rdmIndex]}".`)
-            break
-
-        case 'pureness':
-            yourGift.push(`Its pureness is : "${randomGift[caract][rdmIndex]}".`)
-            break
-
-        default: yourGift.push("Error: can't identify your gift")
-    }
+const randomWord = (arr) => {
+    let rdmIdx = randomNumber(arr.length);
+    return arr[rdmIdx]
 };
+
+
+const pickWords = (obj) => {
+    const pickedWords = [];
+    for (let list in obj) {
+        pickedWords.push(randomWord(obj[list]))
+    }  
+    return pickedWords;   
+}
 
 const formattedGift = (arr) => {
-   console.log(yourGift.join('\n'))
-};
+    console.log(arr.join('\n'))
+ };
 
-formattedGift(yourGift);
+ formattedGift(pickWords(randomGift)); 
