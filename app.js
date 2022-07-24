@@ -31,3 +31,9 @@ for (let caract in randomGift) {
         default: yourGift.push("Error: can't identify your gift")
     }
 };
+
+const formattedGift = () => {
+    yourGift.join('\n')
+};
+
+formattedGift(yourGift);
