@@ -10,14 +10,14 @@ const randomGift = {
 
 const yourGift = [];
 
-for (caract in randomGift) {
+for (let caract in randomGift) {
     
     let rdmIndex = randomNumber(randomGift[caract].length);
 
-    switch(prop) {
+    switch(caract) {
         
         case 'type':
-            yourGift.push(`Your random gift is a : ${randomGift[caract][rdmIndex].}`)
+            yourGift.push(`Your random gift is a : ${randomGift[caract][rdmIndex]}.`)
             break;
         
         case 'color':
@@ -29,6 +29,5 @@ for (caract in randomGift) {
             break;
 
         default: yourGift.push("Error: can't identify your gift")
-    
     }
 };
